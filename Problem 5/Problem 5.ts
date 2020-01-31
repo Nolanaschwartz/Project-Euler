@@ -5,7 +5,7 @@
 function smallestMultiple(): number {
     let product = 20;
 
-    while (isDivisible(product)) {
+    while (!isDivisible(product)) {
         product += 20;
     }
 
@@ -14,6 +14,7 @@ function smallestMultiple(): number {
 
 function isDivisible(value: number): boolean {
     const multiples = [];
+    let flag = true
 
     for (let i = 1; i <= 20; i++) {
         multiples.push(i)
@@ -21,11 +22,11 @@ function isDivisible(value: number): boolean {
 
     multiples.forEach(multiple => {
         if (value % multiple !== 0) {
-            return false;
+            flag = false;
         }
     });
 
-    return true;
+    return flag;
 }
 
 
