@@ -14,7 +14,7 @@ function smallestMultiple(): number {
 
 function isDivisible(value: number): boolean {
     const multiples = [];
-    let flag = true
+    let flag = true;
 
     for (let i = 1; i <= 20; i++) {
         multiples.push(i)
