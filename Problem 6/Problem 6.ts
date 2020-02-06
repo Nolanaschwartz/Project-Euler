@@ -12,16 +12,14 @@ const naturalNumbers: number = 100;
 
 function SumSquareDifference(value: number): number {
     let sumOfSquares = 0;
-    let sum = 0;
+    let squareOfSum = 0;
 
     for (let i = 1; i <= value; i++) {
         sumOfSquares += i ** 2;
-        sum += i;
+        squareOfSum += i;
     }
 
-    const squareOfSum = sum * sum;
-
-    return squareOfSum - sumOfSquares;
+    return squareOfSum ** 2 - sumOfSquares;
 }
 
 console.log(SumSquareDifference(naturalNumbers))
